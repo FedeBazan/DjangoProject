@@ -7,10 +7,10 @@ from django.template import Template,context
 
 
 def saludar(request):
-    doc_externo=open('C:/Users/Canavire/pythonCourse/DjangoProject/DjangoProject/Proyecto1/HTML/miplantilla.html')
+    doc_externo=open('C:/Users/Canavire/pythonCourse/DjangoProject/DjangoProject/Proyecto1/primera_app/template/primera_app/home.html')
     plt=Template(doc_externo.read())
     doc_externo.close()
-    conntexto=context()
+    conntexto=Context()
     documento=plt.render(conntexto)
     return HttpResponse(documento)
 
